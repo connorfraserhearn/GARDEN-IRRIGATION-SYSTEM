@@ -4,11 +4,9 @@ import time
 import cryptography.fernet
 
 BROADCAST_IP = "172.16.3.255"
-# BROADCAST_IP = "localhost"
+BROADCAST_IP = "localhost"
 PORT = 5000
-# PORT = 5050
 SHARED_KEY = b"ZzLmrPJ8Sh2tFrjXOGV024YbR97nmCp-50GZhUF_4s8="
-SHARED_KEY = b"AWXEIG9bte7vvCx9kGqzQHktstqkoK3IWQpSXiTUE6M="
 
 cipher = cryptography.fernet.Fernet(SHARED_KEY)
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -26,7 +24,6 @@ hello_msg = json.dumps({
 }).encode("utf-8")
 
 while True:
-
     encrypted = cipher.encrypt(hello_msg)
     # Broadcast encrypted HELLO
     sock.sendto(encrypted, (BROADCAST_IP, PORT))
