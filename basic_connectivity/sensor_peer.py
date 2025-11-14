@@ -3,9 +3,8 @@ import json
 import time
 
 BROADCAST_IP = "172.16.3.255"
-# BROADCAST_IP = "localhost"
+BROADCAST_IP = "localhost"
 PORT = 5000
-# PORT = 5050
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
