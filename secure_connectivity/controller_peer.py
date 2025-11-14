@@ -3,7 +3,6 @@ import json
 import cryptography.fernet
 
 PORT = 5000
-# PORT = 5050
 SHARED_KEY = b"ZzLmrPJ8Sh2tFrjXOGV024YbR97nmCp-50GZhUF_4s8="
 
 cipher = cryptography.fernet.Fernet(SHARED_KEY)
