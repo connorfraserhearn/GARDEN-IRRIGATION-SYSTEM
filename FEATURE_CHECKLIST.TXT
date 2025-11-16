@@ -1,0 +1,12 @@
+1. Peer-to-peer (no central server)
+2. Dynamic device discovery
+3. Structured JSON messaging
+4. Bidirectional communication
+5. Periodic broadcasting
+6. Timeout handling
+7. Clean joining and leaving
+8. AES-based encrypted communication
+9. Secure key handling
+10. Message integrity checking
+11. Authentication via shared key
+12. Decryption error handling
